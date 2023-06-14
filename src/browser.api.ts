@@ -155,3 +155,4 @@ export class BrowserApi {
     });
   };
 }
+BrowserApi.init();
