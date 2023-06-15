@@ -91,7 +91,8 @@ export class BrowserApi {
       if (optionsPage) window.open(`chrome-extension://${chrome.runtime.id}/${optionsPage}${subpage}`);
       return;
     }
-    window.open(browser.runtime.getManifest().options_ui?.page);
+    const optionsPage = browser.runtime.getManifest().options_ui?.page;
+    window.open(`${optionsPage}${subpage}`);
     window.close();
   }
 
