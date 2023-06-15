@@ -100,7 +100,7 @@ export class BrowserApi {
       if (this.isChromeValue) {
         return chrome.dom.openOrClosedShadowRoot(el);
       }
-      return el.openOrClosedShadowRoot();
+      return browser.dom.openOrClosedShadowRoot(el);
     } catch (e) {
       fnConsoleLog('BrowserApiWrapper->shadowRoot->ERROR', el, e);
     }
