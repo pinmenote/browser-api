@@ -3,6 +3,6 @@
   "compilerOptions": {
     "target": "es2021",
     "types": ["node", "firefox-webext-browser", "chrome"],
-    "typeRoots": ["node_modules/@types", "@types"]
+    "typeRoots": ["node_modules/@types"]
   }
 }
