@@ -1,6 +1,6 @@
 {
   "name": "@pinmenote/browser-api",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Michal Szczepanski",
   "license": "MIT",
   "description": "cross browser compatible api layer",
