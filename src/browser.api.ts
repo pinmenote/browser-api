@@ -108,7 +108,9 @@ export class BrowserApi {
     return null;
   }
 
-  static sendTabMessage = <T>(msg: BusMessage<T>): Promise<void> => {
+  static sendTabMessage = <T>(msg: BusMessage<T>, tabId?: number): Promise<void> => {
+    if (tabId) return this.tabs.sendMessage(tabId, msg);
+
     return new Promise((resolve: (...arg: any) => void, reject: (...arg: any) => void) => {
       /* eslint-disable @typescript-eslint/no-unsafe-call */
       /* eslint-disable @typescript-eslint/no-floating-promises */
