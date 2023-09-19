@@ -25,6 +25,11 @@ export class BrowserApi {
     if (this.browserApi) return;
     try {
       this.browserApi = browser;
+      // jsfiddle iframe problem
+      if (!this.browserApi.runtime) {
+        this.browserApi = chrome;
+        this.isChromeValue = true;
+      }
     } catch (e) {
       this.browserApi = chrome;
       this.isChromeValue = true;
